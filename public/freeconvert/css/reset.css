@@ -1,0 +1,83 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: .3s;
+}
+
+a:hover, button:hover {
+    transition: .3s;
+}
+
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: .3s;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+input[type=button] {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    min-width: 300px;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+video {
+    vertical-align: bottom;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+svg {
+    display: block;
+}
+
+fieldset {
+    padding: 0;
+    border: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+select::-ms-expand {
+    display: none;
+}
+

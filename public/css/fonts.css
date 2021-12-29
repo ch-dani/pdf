@@ -1,0 +1,15 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
+
+
+
+
+@font-face {
+  font-family: "Arial";
+  src: local("Arial"), url("/js/new_editor/fonts/arial.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "STSong";
+  src: url("/js/new_editor/fonts/stsong_zh.ttf") format("truetype");
+}
+

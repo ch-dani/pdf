@@ -1,0 +1,1731 @@
+@font-face {
+	font-family: 'Arimo';
+	src: url('/editor_fonts/Arimo-Regular.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Carlito';
+	src: url('/editor_fonts/Carlito-Regular.ttf')  format('truetype');
+}
+/*@font-face {*/
+/*	font-family: 'Courier';*/
+/*	src: url('/editor_fonts/Courier.ttf')  format('truetype');*/
+/*}*/
+@font-face {
+	font-family: 'DejaVuSans';
+	src: url('/editor_fonts/DejaVuSans.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'DejaVuSans';
+	src: url('/editor_fonts/DejaVuSans.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'DroidSerif';
+	src: url('/editor_fonts/DroidSerif-Regular.ttf')  format('truetype');
+}
+
+
+@font-face {
+	font-family: 'Helvetica';
+	src: local('wwwow'), url('/editor_fonts/Helvetica.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'Helvetica2';
+	src: local('skip_local'), url('/editor_fonts/Helvetica.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('/editor_fonts/Lato.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'LiberationSans';
+	src: url('/editor_fonts/LiberationSans-Regular.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'NotoSans';
+	src: url('/editor_fonts/NotoSans-Regular.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url('/editor_fonts/OpenSans-Regular.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'PTSerif';
+	src: url('/editor_fonts/ptserif.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('/editor_fonts/Roboto-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'EBGaramond';
+	src: url('/editor_fonts/EBGaramond-Regular.ttf')  format('truetype');
+}
+
+
+
+@font-face {
+	font-family: 'OpenSansCondLight';
+	src: url('/editor_fonts/OpenSans-CondLight.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'Oranienbaum';
+	src: url('/editor_fonts/Oranienbaum.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'PTSans';
+	src: url('/editor_fonts/ptsans.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'PTSansCaption';
+	src: url('/editor_fonts/ptsanscaption.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'PTSansNarrow';
+	src: url('/editor_fonts/ptsansnarrow.ttf')  format('truetype');
+}
+
+
+@font-face {
+	font-family: 'Kaiti';
+	src: url('/editor_fonts/Kaiti.ttf')  format('truetype');
+}
+@font-face {
+	font-family: 'heiti';
+	src: url('/editor_fonts/heiti.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'FangSong';
+	src: url('/editor_fonts/FangSong.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'SongTi';
+	src: url('/editor_fonts/SongTi.ttf')  format('truetype');
+}
+
+@font-face {
+	font-family: 'test_font';
+	src: url('/test.ttf');
+}
+@font-face {
+	font-family: 'test_serif_black';
+	src: url('/serif_black.ttf');
+}
+
+@font-face {
+	font-family: 'testttf2';
+	src: url('/testttf2.ttf');
+}
+
+
+.textLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0.2;
+    line-height: 1.0;
+}
+
+.textLayer > div {
+    /*color: transparent;*/
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+
+.textLayer > div.skipp-pointer-events,
+.textLayer > div.skipp-pointer-events > * {
+    color: transparent !important;
+}
+
+.textLayer .highlight {
+    margin: -1px;
+    padding: 1px;
+
+    background-color: rgb(180, 0, 170);
+    border-radius: 4px;
+}
+
+.textLayer .highlight.begin {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.textLayer .highlight.end {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.textLayer .highlight.middle {
+    border-radius: 0px;
+}
+
+.textLayer .highlight.selected {
+    background-color: rgb(0, 100, 0);
+}
+
+.textLayer ::-moz-selection {
+    background: rgb(0, 0, 255);
+}
+
+.textLayer ::selection {
+    background: rgb(0, 0, 255);
+}
+
+.textLayer .endOfContent {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.textLayer .endOfContent.active {
+    top: 0px;
+}
+
+.annotationLayer section {
+    position: absolute;
+}
+
+.annotationLayer .linkAnnotation > a,
+.annotationLayer .buttonWidgetAnnotation.pushButton > a {
+    position: absolute;
+    font-size: 1em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.annotationLayer .linkAnnotation > a:hover,
+.annotationLayer .buttonWidgetAnnotation.pushButton > a:hover {
+    opacity: 0.2;
+    background: #ff0;
+}
+
+.annotationLayer .textAnnotation img {
+    position: absolute;
+    cursor: pointer;
+}
+
+.annotationLayer .textWidgetAnnotation input,
+.annotationLayer .textWidgetAnnotation textarea,
+.annotationLayer .choiceWidgetAnnotation select,
+.annotationLayer .buttonWidgetAnnotation.checkBox input,
+.annotationLayer .buttonWidgetAnnotation.radioButton input {
+    background-color: rgba(0, 54, 255, 0.13);
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    font-size: 9px;
+    height: 100%;
+    margin: 0;
+    padding: 0 3px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.annotationLayer .choiceWidgetAnnotation select option {
+    padding: 0;
+}
+
+.annotationLayer .buttonWidgetAnnotation.radioButton input {
+    border-radius: 50%;
+}
+
+.annotationLayer .textWidgetAnnotation textarea {
+    font: message-box;
+    font-size: 9px;
+    resize: none;
+}
+
+.annotationLayer .textWidgetAnnotation input[disabled],
+.annotationLayer .textWidgetAnnotation textarea[disabled],
+.annotationLayer .choiceWidgetAnnotation select[disabled],
+.annotationLayer .buttonWidgetAnnotation.checkBox input[disabled],
+.annotationLayer .buttonWidgetAnnotation.radioButton input[disabled] {
+    background: none;
+    border: 1px solid transparent;
+    cursor: not-allowed;
+}
+
+.annotationLayer .textWidgetAnnotation input:hover,
+.annotationLayer .textWidgetAnnotation textarea:hover,
+.annotationLayer .choiceWidgetAnnotation select:hover,
+.annotationLayer .buttonWidgetAnnotation.checkBox input:hover,
+.annotationLayer .buttonWidgetAnnotation.radioButton input:hover {
+    border: 1px solid #000;
+}
+
+.annotationLayer .textWidgetAnnotation input:focus,
+.annotationLayer .textWidgetAnnotation textarea:focus,
+.annotationLayer .choiceWidgetAnnotation select:focus {
+    background: none;
+    border: 1px solid transparent;
+}
+
+.annotationLayer .buttonWidgetAnnotation.checkBox input:checked:before,
+.annotationLayer .buttonWidgetAnnotation.checkBox input:checked:after,
+.annotationLayer .buttonWidgetAnnotation.radioButton input:checked:before {
+    background-color: #000;
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.annotationLayer .buttonWidgetAnnotation.checkBox input:checked:before,
+.annotationLayer .buttonWidgetAnnotation.checkBox input:checked:after {
+    height: 80%;
+    left: 45%;
+    width: 1px;
+}
+
+.annotationLayer .buttonWidgetAnnotation.checkBox input:checked:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.annotationLayer .buttonWidgetAnnotation.checkBox input:checked:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.annotationLayer .buttonWidgetAnnotation.radioButton input:checked:before {
+    border-radius: 50%;
+    height: 50%;
+    left: 30%;
+    top: 20%;
+    width: 50%;
+}
+
+.annotationLayer .textWidgetAnnotation input.comb {
+    font-family: monospace;
+    padding-left: 2px;
+    padding-right: 0;
+}
+
+.annotationLayer .textWidgetAnnotation input.comb:focus {
+    /*
+     * Letter spacing is placed on the right side of each character. Hence, the
+     * letter spacing of the last character may be placed outside the visible
+     * area, causing horizontal scrolling. We avoid this by extending the width
+     * when the element has focus and revert this when it loses focus.
+     */
+    width: 115%;
+}
+
+.annotationLayer .buttonWidgetAnnotation.checkBox input,
+.annotationLayer .buttonWidgetAnnotation.radioButton input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+}
+
+.annotationLayer .popupWrapper {
+    position: absolute;
+    width: 20em;
+}
+
+.annotationLayer .popup {
+    position: absolute;
+    z-index: 200;
+    max-width: 20em;
+    background-color: #FFFF99;
+    box-shadow: 0px 2px 5px #333;
+    border-radius: 2px;
+    padding: 0.6em;
+    margin-left: 5px;
+    cursor: pointer;
+    font: message-box;
+    word-wrap: break-word;
+}
+
+.annotationLayer .popup h1 {
+    font-size: 1em;
+    border-bottom: 1px solid #000000;
+    margin: 0;
+    padding-bottom: 0.2em;
+}
+
+.annotationLayer .popup p {
+    margin: 0;
+    padding-top: 0.2em;
+}
+
+.annotationLayer .highlightAnnotation,
+.annotationLayer .underlineAnnotation,
+.annotationLayer .squigglyAnnotation,
+.annotationLayer .strikeoutAnnotation,
+.annotationLayer .lineAnnotation svg line,
+.annotationLayer .squareAnnotation svg rect,
+.annotationLayer .circleAnnotation svg ellipse,
+.annotationLayer .polylineAnnotation svg polyline,
+.annotationLayer .polygonAnnotation svg polygon,
+.annotationLayer .stampAnnotation,
+.annotationLayer .fileAttachmentAnnotation {
+    cursor: pointer;
+}
+
+.pdfViewer .canvasWrapper {
+    overflow: hidden;
+}
+
+.pdfViewer .canvasWrapper {
+    border: 1px solid #EAEBF2;
+    border-radius: 15px;
+}
+
+.pdfViewer .page {
+    direction: ltr;
+    width: 816px;
+    height: 1056px;
+    margin: 1px auto -8px auto;
+    position: relative;
+    overflow: visible;
+    background-color: white;
+    border: 1px solid #EAEBF2;
+    border-radius: 15px;
+}
+
+.pdfViewer.removePageBorders .page {
+    margin: 0px auto 10px auto;
+    border: none;
+}
+
+.pdfViewer.singlePageView {
+    display: inline-block;
+}
+
+.pdfViewer.singlePageView .page {
+    margin: 0;
+    border: none;
+}
+
+.pdfViewer .page canvas {
+    margin: 0;
+    display: block;
+}
+
+.pdfViewer .page canvas[hidden] {
+    display: none;
+}
+
+.pdfViewer .page .loadingIcon {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/loading-icon.gif') center no-repeat;
+}
+
+.pdfPresentationMode:-ms-fullscreen .pdfViewer .page {
+    margin-bottom: 100% !important;
+}
+
+.pdfPresentationMode:-webkit-full-screen .pdfViewer .page {
+    margin-bottom: 100%;
+    border: 0;
+}
+
+.pdfPresentationMode:-moz-full-screen .pdfViewer .page {
+    margin-bottom: 100%;
+    border: 0;
+}
+
+.pdfPresentationMode:fullscreen .pdfViewer .page {
+    margin-bottom: 100%;
+    border: 0;
+}
+
+/* 8==================== TODO =================3 */
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    /*	overflow: hidden !important;;*/
+}
+
+.pdfViewer .textLayer > .edited {
+    /*background-color: #fff;*/
+    opacity: 1;
+    pointer-events: none;
+}
+
+.pdfViewer .textLayer > div, 
+.page .editable_element, 
+.selected_now, 
+.inserted_image.follow_the_mouse, 
+.outer_image_div {
+    /*	border: 2px dashed transparent;*/
+    /* overflow: hidden; */
+}
+
+.new_anotation_link {
+}
+
+div[current_editor='links'] .annotationLayer .linkAnnotation,
+div[current_editor='links'] .annotationLayer .new_anotation_link {
+    border: 1px solid transparent;
+    border-color: #089de3 !important;
+    background-color: rgba(8, 157, 227, 0.15) !important;
+}
+
+div[current_editor='links'] .annotationLayer .linkAnnotation:hover,
+.new_anotation_link:hover {
+    border: 1px dashed #089de3;
+    border-color: #089de3 !important;
+}
+
+div[current_editor='links']  .edited_link {
+    /*	border: 2px dashed #089de3;*/
+    border-color: #089de3 !important;
+    background-color: rgba(8, 157, 227, 0.15);;
+
+}
+
+.new_anotation_link, .new_whiteout, .new_shape {
+    position: absolute !important;
+    z-index: 10000;
+}
+
+div[current_editor="text"] .text_content_element:hover:not(.selected_now),
+div[current_editor="text"] .page .editable_element:hover:not(.selected_now),
+/* div[current_editor="text"] .page .editable_element:focus, */
+/* .selected_now, */
+/* #simplePDFEditor .element_selected_now:not(.new_whiteout):not(.new_shape), */
+#simplePDFEditor .outer_image_div.element-images:hover:not(.selected_now), 
+/* #simplePDFEditor .outer_image_div.element-images:focus, */
+#simplePDFEditor .outer_image_div.element-sign:hover:not(.selected_now), 
+/* #simplePDFEditor .outer_image_div.element-sign:focus, */
+{    
+	border-color: #089de3 !important;
+    background-color: rgba(8, 157, 227, 0.15) !important;
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    /* outline: 2px dashed transparent !important; */
+    /* outline-color: #089de3 !important */
+}
+
+#simplePDFEditor .element_selected_now:not(.new_whiteout):not(.new_shape):after, .text_content_element.selected_now:after,
+.text_content_element.hover:after,
+#simplePDFEditor .outer_image_div.element-forms:hover:after,
+div[current_editor="text"] .text_content_element:hover:after,
+div[current_editor="text"] .page .editable_element:hover:after,
+#simplePDFEditor .new_whiteout.element_selected_now:after,
+#simplePDFEditor .new_whiteout:hover:after,
+#simplePDFEditor .new_whiteout:focus:after,
+#simplePDFEditor .outer_image_div.element-images:focus:after,
+.element-images:hover:after,
+body #simplePDFEditor .page .ui-draggable-dragging:after  {
+    content:'';
+    position: absolute;
+    outline: 2px dashed #089de3 !important;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* body #simplePDFEditor .page .ui-draggable-dragging:after {
+    content: 'TEST';
+} */
+
+#simplePDFEditor:not(.proccessed){
+    pointer-events: none !important;
+}
+
+div[current_editor="text"] .text_content_element:hover {
+    background-color: rgba(8, 157, 227, 0.15) !important;
+}
+
+/* #simplePDFEditor .new_whiteout:hover:not(.selected_now), 
+#simplePDFEditor .new_whiteout:focus, 
+#simplePDFEditor .new_whiteout.element_selected_now{
+    margin: 0;
+    padding: 0;
+    outline: 2px dashed transparent !important;
+    outline-color: #089de3 !important
+} */
+
+.text_content_element {
+    text-overflow: ellipsis;
+}
+
+#simplePDFEditor .new_whiteout:hover, .follow_the_mouse{
+	z-index: 100000 !important;
+}
+#viewer .active_image_moving .outer_image_div:not(.form_image_item_outer){
+	pointer-events: none !important;
+}
+
+
+.drawing_rect{
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    outline: 1px dashed transparent !important;
+    outline-color: #089de3 !important	
+}
+
+
+.pdfViewer .selected_now {
+    overflow: visible !important;
+}
+
+.pdfViewer .page .editable_element {
+    min-width: 20px;
+    padding-top: 1px;
+    white-space: nowrap !important;
+}
+
+.pdfViewer .textLayer {
+    opacity: 1;
+    line-height: 1.2;
+}
+
+.pdfViewer .linkAnnotation {
+    pointer-events: none;
+}
+
+.pdfViewer .page .editable_element {
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+
+.pdfViewer *::selection {
+    background: rgba(8, 157, 227, 0.15);
+}
+
+.skipp-pointer-events {
+    pointer-events: none !important;
+}
+
+.editable_element:before, .watermark_draggable_text .rotatable_helper:before {
+    /* content: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUwNy4zMTIgNTA3LjMxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTA3LjMxMiA1MDcuMzEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPGc+CgkJPGc+CgkJCTxwYXRoIGQ9Ik0zMDEuNjU2LDc1LjMxMmMwLTI2LjUxLTIxLjQ5LTQ4LTQ4LTQ4Yy0yNi41MSwwLTQ4LDIxLjQ5LTQ4LDQ4djE2MGMtNDQuMTYxLDAuMDUzLTc5Ljk0NywzNS44MzktODAsODB2ODUuNjE2bDY0LDgwICAgICB2MjYuMzg0aDMydi0zNy42MTZsLTY0LTgwdi03NC4zODRjMC0yNi41MSwyMS40OS00OCw0OC00OHYxMTJoMzJ2LTMwNGMwLTguODM3LDcuMTYzLTE2LDE2LTE2czE2LDcuMTYzLDE2LDE2djE0MC4yMjQgICAgIGw1Mi4zMiwxNC4yNzJsOC40MTYtMzAuODhsLTI4LjgtNy44NEwzMDEuNjU2LDc1LjMxMnoiIGZpbGw9IiM5MURDNUEiLz4KCQkJPHJlY3QgeD0iMzU2LjQ5IiB5PSIyMTEuMDY2IiB0cmFuc2Zvcm09Im1hdHJpeCgtMC45NjQ4IC0wLjI2MjkgMC4yNjI5IC0wLjk2NDggNjcyLjE3MDYgNTQ0LjA4MTcpIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiM5MURDNUEiLz4KCQkJPHBvbHlnb24gcG9pbnRzPSI0MTQuNiwyNTUuMDU2IDQ0NS42NTYsMjYzLjUzNiA0NDUuNjU2LDQwNS45ODQgMzk3LjY1Niw0NjkuOTg0IDM5Ny42NTYsNTA3LjMxMiA0MjkuNjU2LDUwNy4zMTIgICAgICA0MjkuNjU2LDQ4MC42NCA0NzcuNjU2LDQxNi42NCA0NzcuNjU2LDIzOS4wODggNDIzLjAxNiwyMjQuMTkyICAgICIgZmlsbD0iIzkxREM1QSIvPgoJCQk8cG9seWdvbiBwb2ludHM9Ijg4Ljk2OCwyMi42MjQgNjYuMzQ0LDAgNy4wMzIsNTkuMzEyIDY2LjM0NCwxMTguNjI0IDg4Ljk2OCw5NiA2OC4yOCw3NS4zMTIgMTA5LjY1Niw3NS4zMTIgMTA5LjY1Niw0My4zMTIgICAgICA2OC4yOCw0My4zMTIgICAgIiBmaWxsPSIjOTFEQzVBIi8+CgkJCTxyZWN0IHg9IjE0MS42NTYiIHk9IjQzLjMxMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjOTFEQzVBIi8+CgkJCTxwb2x5Z29uIHBvaW50cz0iNDE4LjM0NCw5NiA0NDAuOTY4LDExOC42MjQgNTAwLjI4LDU5LjMxMiA0NDAuOTY4LDAgNDE4LjM0NCwyMi42MjQgNDM5LjAzMiw0My4zMTIgMzk3LjY1Niw0My4zMTIgICAgICAzOTcuNjU2LDc1LjMxMiA0MzkuMDMyLDc1LjMxMiAgICAiIGZpbGw9IiM5MURDNUEiLz4KCQkJPHJlY3QgeD0iMzMzLjY1NiIgeT0iNDMuMzEyIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIGZpbGw9IiM5MURDNUEiLz4KCQk8L2c+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg=="); */
+    content: '';
+    position: absolute;
+    background: #fff;
+    background-image: url(images/drag.svg);
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    border: 1px solid #eaebf2;
+    top: -30px;
+    left: 50%;
+    cursor: move;
+    width: 26px;
+    height: 26px;
+    transform: translateX(-50%);
+}
+
+div[current_editor="images"] .outer_image_div,
+div[current_editor="sign"] .outer_image_div {
+    cursor: move;
+}
+
+.follow_the_mouse {
+    position: absolute;
+}
+
+.inserted_image.follow_the_mouse {
+    pointer-events: none;
+}
+
+.outer_image_div.ui-resizable-resizing .inserted_image, .is_resized .inserted_image{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+
+.page.active_image_moving .textLayer,
+.page.active_image_moving .annotationLayer {
+    pointer-events: none !important;
+}
+
+/* 8========= TODO развлекаемся с поинтер ивентсами ===========3*/
+.text_content_element,
+.linkAnnotation,
+.outer_image_div,
+.new_whiteout,
+.new_shape,
+.pdfViewer .annotationLayer > .edited,
+.new_anotation_link,
+.new_form_element.follow_the_mouse,
+.element-forms {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div[current_editor="annotate"] .text_content_element {
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+}
+
+.follow_the_mouse {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+}
+
+#simplePDFEditor .element-forms.follow_the_mouse {
+    pointer-events: none;
+}
+
+div[current_editor="text"] .text_content_element,
+div[current_editor="images"] .element-images,
+div[current_editor="links"] .new_anotation_link,
+div[current_editor='links'] .annotationLayer .linkAnnotation,
+div[current_editor="whiteout"] .new_whiteout,
+div[current_editor="elipse"] .new_shape,
+div[current_editor="rectangle"] .new_shape,
+div[current_editor="forms"] .element-forms,
+div[current_editor="sign"] .element-sign,
+div[current_editor="forms"]  .element-forms,
+div[current_editor="annotate"] .text_content_element {
+    pointer-events: auto;
+}
+
+div[current_editor="images"] .element-images.form_image_item_outer{
+	pointer-events: auto !important;
+}
+
+
+div[current_editor="elipse"] .new_shape,
+div[current_editor="rectangle"] .new_shape {
+    pointer-events: all;
+    /*	border: 2px dashed transparent;*/
+    border-color: #089de3 !important;
+}
+
+/* 8========= конец поинтер ивентсов ===========3*/
+
+.new_annotate.strike {
+    position: relative;
+    background: none;
+    background-color: none;
+}
+
+.new_annotate.strike:before {
+    border-bottom: 2px solid red;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+}
+
+.new_form_element {
+    border: 1px solid gray;
+    background: white;
+    border: 1px solid gray;
+}
+
+.new_form_element.dropdown:after {
+    content: " ";
+    background: url("/img/form-caret.svg");
+    background-size: 50px 50px;
+    position: absolute;
+    width: 50px;
+    height: 69px;
+    right: -4px;
+    top: -10px;
+}
+
+.element-forms.textarea, .element-forms.input {
+    background: white;
+    border: 1px solid red;
+}
+
+.erase_canvas {
+    z-index: 100;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/*cursors*/
+
+div[current_editor='links'], div[current_editor='whiteout'], div[current_editor='shape'], div[current_editor='rectangle'], div[current_editor='elipse'] {
+    cursor: crosshair;
+}
+
+div[current_editor='links'] .edited_link {
+    cursor: move;
+}
+
+/* Form Tools Style */
+.tools-dropdown-menu.forms-opts .tools-default.change-form-item-tools-wrap {
+    padding: 10px 15px 20px 15px;
+}
+
+.tools-dropdown-menu.forms-opts .tools-default.change-form-item-tools-wrap a {
+    border: none;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.tools-dropdown-menu.forms-opts .upload-link {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    padding: 20px 15px 2px 15px;
+    background: -webkit-linear-gradient(#4298E8, #8044DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tools-dropdown-menu.forms-opts .tools-default.change-form-item-tools-wrap a img {
+    height: 20px;
+    max-width: none;
+}
+
+/* Form Field Style */
+.ff-editable-menu {
+    background-color: #fff;
+    padding: 20px 15px;
+    border-radius: 10px;
+    border: 1px solid #EAEBF2;
+    width: 300px;
+    text-align: left;
+    margin: 10px;
+    position: absolute;
+}
+
+.ff-editable-menu input[type="text"] {
+    width: 100%;
+    display: block;
+    height: 40px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid #EAEBF2;
+}
+
+.ff-editable-menu textarea {
+    width: 100%;
+    display: block;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid #EAEBF2;
+}
+
+.ff-editable-menu .form-group {
+    margin-bottom: 15px;
+}
+
+.ff-editable-menu .checkbox {
+    display: block;
+    min-height: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.ff-editable-menu .checkbox label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.ff-editable-menu .checkbox input[type="checkbox"] {
+    float: left;
+    margin-left: -20px;
+}
+
+.ff-editable-menu .bottom-btns .btn-group {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.ff-editable-menu .bottom-btns button {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 0 15px;
+    height: 44px;
+    margin: 0 3px;
+    background-color: #fff;
+    color: #333;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-transition: all .4s ease 0s;
+    -o-transition: all .4s ease 0s;
+    transition: all .4s ease 0s;
+    border: 1px solid #EAEBF2;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.ff-editable-menu .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* Image Border Style */
+.outer-element-block {
+    text-align: center;
+}
+
+.outer-element {
+    border: 2px dashed #089de3;
+    display: inline-block;
+    position: relative;
+}
+
+.outer-element img {
+    cursor: move;
+    margin: 5px;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    display: none !important;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.outer_image_div.element-images:hover .ui-resizable-handle,
+.outer_image_div.element-sign:hover .ui-resizable-handle,
+#simplePDFEditor .element_selected_now .ui-resizable-handle,
+#simplePDFEditor .outer_image_div.element-sign:hover .ui-resizable-handle, #simplePDFEditor .outer_image_div.element-sign:focus .ui-resizable-handle,
+#simplePDFEditor .new_shape:hover .ui-resizable-handle, #simplePDFEditor .new_shape:focus .ui-resizable-handle,
+#simplePDFEditor .new_whiteout:hover .ui-resizable-handle, #simplePDFEditor .new_whiteout:focus .ui-resizable-handle,
+#simplePDFEditor .new_anotation_link:hover .ui-resizable-handle, #simplePDFEditor .new_anotation_link:focus .ui-resizable-handle,
+#simplePDFEditor .element-forms:hover .ui-resizable-handle, #simplePDFEditor .element-forms:focus .ui-resizable-handle
+{
+	display: block !important;
+}
+
+
+#simplePDFEditor[current_editor="rectangle"] .new_shape,
+#simplePDFEditor[current_editor="whiteout"] .new_whiteout,
+#simplePDFEditor[current_editor="elipse"] .new_shape,
+#simplePDFEditor[current_editor="forms"] .element-forms {
+    cursor: move;
+}
+
+.ui-resizable-n {
+    top: -7px;
+    left: 50%;
+    cursor: n-resize;
+}
+
+.ui-resizable-e {
+    right: -7px;
+    top: 50%;
+    margin-top: -5px;
+    cursor: e-resize;
+}
+
+.ui-resizable-s {
+    bottom: -5px;
+    left: 50%;
+    cursor: s-resize;
+}
+
+.ui-resizable-w {
+    left: -7px;
+    top: 50%;
+    margin-top: -5px;
+    cursor: w-resize;
+}
+
+.ui-resizable-se {
+    bottom: -7px;
+    right: -7px;
+    cursor: se-resize;
+}
+
+.ui-resizable-sw {
+    bottom: -7px;
+    left: -7px;
+    cursor: sw-resize;
+}
+
+.ui-resizable-ne {
+    top: -7px;
+    right: -7px;
+    cursor: ne-resize;
+}
+
+.ui-resizable-nw {
+    left: -7px;
+    top: -7px;
+    cursor: nw-resize;
+}
+
+.ui-resizable-e, .ui-resizable-n, .ui-resizable-ne, .ui-resizable-nw, .ui-resizable-s, .ui-resizable-se, .ui-resizable-sw, .ui-resizable-w {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid #089de3;
+}
+
+.shape-edit-group {
+    position: fixed;
+    z-index: 10;
+    right: 250px;
+    top: 150px;
+    border: 1px solid #EAEBF2;
+    border-radius: 7px;
+    display: flex;
+}
+
+.shape-edit-group > li {
+    height: 35px;
+    display: flex;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    color: #333333;
+    cursor: pointer;
+    position: relative;
+}
+
+.shape-edit-group > li.shape-active {
+    background: #EAEBF2;
+}
+
+.shape-edit-group > li i {
+    margin: 0 2px;
+}
+
+.shape-edit-group > li:not(:last-child) {
+    border-right: 2px solid #EAEBF2;
+}
+
+.shape-active .shape-drop {
+    display: block;
+}
+
+.shape-active .shape-drop.color-opts {
+    display: flex;
+}
+
+.shape-drop {
+    position: absolute;
+    z-index: 25;
+    top: 38px;
+    left: 0;
+    border-radius: 7px;
+    box-shadow: 0px 0 14px 2px rgba(0, 0, 0, 0.10);
+    padding: 5px 0;
+    background: #ffffff;
+    display: none;
+}
+
+.shape-drop.square-drop li {
+    margin: 2px 0;
+    padding: 3px 0;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.shape-drop.square-drop li:hover {
+    background: #e9e9e9;
+}
+
+.shape-drop li span {
+    width: 25px;
+    background: #000000;
+}
+
+.shape-drop.color-opts {
+    display: none;
+    flex-wrap: wrap;
+    width: 232px;
+    padding: 15px;
+}
+
+.shape-drop.color-opts a {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.tooltip-shape {
+    display: none;
+    color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    background: #000000;
+    padding: 5px 15px 5px;
+    width: 160px;
+    left: -60px;
+    z-index: 10;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: 0.4s;
+}
+
+.tooltip-shape::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: -16px;
+    border: 8px solid transparent;
+    border-top: 8px solid #000000;
+}
+
+.shape-edit-group > li:hover .tooltip-shape {
+    opacity: 1;
+    display: block;
+}
+
+.create-signature-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.20);
+}
+
+.sigtature-block {
+    width: 900px;
+    max-width: calc(100% - 30px);
+    background: #ffffff;
+    position: relative;
+}
+
+.signature-top {
+    background-color: #f7f7f7;
+    padding: 25px 30px;
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.signature-btns {
+    margin: 25px 20px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.signature-btns li {
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    color: #8044DB;
+    border: 1px solid rgba(221, 221, 221, 0.00);
+    margin-bottom: -1px;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.signature-btns li i {
+    margin-right: 5px;
+}
+
+.signature-btns li.signatore-btn-active {
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ffffff;
+    color: #555555;
+}
+
+.create-tab-block {
+    display: none;
+    padding: 25px;
+}
+
+.create-tab-block.create-tab-active {
+    display: block;
+}
+
+.signature-input {
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: block;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+}
+
+.signature-file {
+    display: none;
+}
+
+.signature-wodrds {
+    padding: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.signature-wodrds .signaturePreview {
+    border-radius: 5px;
+    font-size: 35px;
+    padding: 12px 5px;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signature-wodrds .signaturePreview:hover {
+    background: rgba(128, 68, 219, 0.25);
+    color: #8044DB;
+}
+
+.signature-btn {
+    margin: 0 0 40px;
+}
+
+.signature-btn .button-green {
+    max-width: 100px;
+    margin: auto;
+}
+
+.signature-close {
+    position: absolute;
+    cursor: pointer;
+    color: #808080;
+    right: 12px;
+    top: 12px;
+    font-size: 38px;
+    transition: 0.3s;
+}
+
+.signature-close:hover {
+    color: #333333;
+}
+
+.touchpad-text {
+    text-align: center;
+    color: #a1a1a1;
+    margin: 0 0 10px;
+}
+
+#sketchpad {
+    overflow: hidden;
+    border: 1px solid #EAEBF2;
+}
+
+.create-tab-block {
+    position: relative;
+}
+
+.u-full-width {
+    position: absolute;
+    top: 50px;
+    right: 32px;
+    z-index: 999;
+    padding: 0;
+    font-size: 32px;
+    color: #ccc;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.outer_image_div, .outer_image_div .ui-wrapper {
+    overflow: visible !important;
+}
+
+/*.outer_image_div .ui-wrapper{*/
+/*	left: 0 !important;*/
+/*	top: 0 !important;*/
+/*}*/
+
+.linkAnnotation .edited {
+    display: none;
+}
+
+.text-editable-menu, .image-editable-menu, .element_editor {
+    z-index: 9998;
+}
+
+.finded_element {
+    background-color: rgba(58, 209, 35, 0.4);
+}
+
+[contenteditable] {
+    -webkit-user-select: text;
+    user-select: text !important;
+}
+
+#viewer {
+    font-size: 10px;
+}
+
+#viewer .page {
+    border: 0 !important;
+}
+
+#app-root.drawing #viewer .page {
+    user-select: none !important;
+}
+
+.popupAnnotation {
+    display: none;
+}
+
+
+.text_content_element.selected_now{
+	padding: 0px !important;
+	margin: 0px !important;
+	border: 0 !important;
+	outline: none;
+}
+.text_content_element:before{
+	display: none;
+}
+.text_content_element.selected_now:before{
+	display: block;
+}
+
+.revert_item{
+	pointer-events: none;
+}
+
+
+.signature-wodrds .signaturePreview:nth-child(1){
+    background: rgba(128, 68, 219, 0.25);
+    color: #8044DB;
+}
+
+
+.annotate-opts li.active{
+	background-color: #EAEBF2;
+}
+
+.annotate-opts .highlite-color.active{
+	border: 2px solid gray;
+}
+
+
+
+.element-forms img{
+	border: 0;
+}
+
+body #simplePDFEditor .page .ui-draggable-dragging {
+	outline: 0 !important;
+}
+
+body #simplePDFEditor #viewer .page .ui-draggable-dragging .ui-resizable-handle {
+	outline: none !important;
+	outline-color: none !important;
+	display: none !important;
+}
+
+html body #viewer .no_border_no_outline:not(.element_selected_now), .outer_image_div{
+	border: none !important;
+	outline: none !important;
+	background: none !important;
+	background-color: none !important;
+}
+html body #viewer .no_border_no_outline:not(.element_selected_now) .ui-resizable-handle{
+	display: none !important;
+}
+
+
+
+.shape-edit-group {
+	position:fixed;
+	z-index: 10;
+	right:250px;
+	top:150px;
+    border: 1px solid #EAEBF2;
+    border-radius:7px;
+    display:flex;         
+}
+.shape-edit-group > li{
+    height:35px;
+    display:flex;
+	background:#ffffff;
+    justify-content:center;
+    align-items:center;
+    padding:0 10px;
+	color:#333333;
+	cursor:pointer;
+	position:relative;
+}
+.shape-edit-group > li.shape-active {
+    background:#EAEBF2;
+}
+.shape-edit-group > li i{
+	margin:0 2px;
+}
+.shape-edit-group > li:not(:last-child){
+    border-right: 2px solid #EAEBF2;
+}
+.shape-active .shape-drop{
+	display:block;
+}
+.shape-active .shape-drop.color-opts {
+    display: flex;
+}
+.shape-drop {
+    position: absolute;
+	z-index:25;
+	top: 38px;
+	left: 0;
+	border-radius: 7px;
+    box-shadow: 0px 0 14px 2px rgba(0, 0, 0, 0.10);
+	padding:5px 0;
+	background:#ffffff;
+	display:none;
+}
+.shape-drop.square-drop li{
+    margin:2px 0;
+	padding:3px 0;
+    width:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:20px;
+	position:relative;
+    transition:0.3s;
+}
+.shape-drop.square-drop li:hover{
+    background:#e9e9e9;
+}
+ .shape-drop li span{
+     width:25px;
+     background:#000000;
+ }
+ .shape-drop.color-opts {
+    display: none;
+    flex-wrap: wrap;
+    width: 232px;
+    padding: 15px;
+}
+ .shape-drop.color-opts a {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+.tooltip-shape{
+	display: none;
+    color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    background: #000000;
+    padding: 5px 15px 5px;
+    width: 160px;
+    left: -60px;
+    z-index: 10;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition-delay: 0.5s;
+    transition: 0.4s;
+}
+.tooltip-shape::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: -16px;
+    border: 8px solid transparent;
+    border-top: 8px solid #000000;
+}
+
+.shape-edit-group > li:hover .tooltip-shape {
+    opacity: 1;
+    display:block;
+}
+
+
+.tools-menu ul.image-opts li.user_image{
+	position: relative;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.tools-menu ul.image-opts li.user_image img{
+	max-height: 100px;
+}
+
+
+.tools-menu ul.image-opts li .user_image_outer{
+	width: 100%;
+}
+
+.tools-menu ul.image-opts li .delete-image{
+	position: absolute;
+	top: 40%;
+	right: -10px;
+	width: 20px;
+}
+
+
+
+.annotate-editable-menu{
+}
+
+
+.creating_document{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.creating_document h1{
+	font-size: 32px;
+}
+
+#simplePDFEditor .broken_cff_font:not(.editable_element), 
+#simplePDFEditor .asian_font:not(.editable_element),
+#simplePDFEditor .text_content_element:not(.editable_element){
+	color: transparent !important;
+}
+
+
+/*#simplePDFEditor .text_content_element.broken_cff_font.edited{*/
+/*	background: white !important;*/
+/*}*/
+
+
+
+
+
+.share_form{
+    width: 600px;
+    margin: 0 auto;
+	border: 1px solid #ebebeb;
+	border-radius: 6px;
+	box-shadow: 0 0 5px #ebebeb;
+	padding: 20px;
+	position: relative;
+	
+	display: none;
+}
+
+
+.share_form_tabs{
+	display: flex;
+	border-bottom: 2px solid #f7f7f7;
+	margin-bottom: 20px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	
+}
+.like_a_tab{
+	width: 30%;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: -2px;
+	z-index: 1000;
+	background: white;
+	border-bottom: 1px solid #f7f7f7; 
+	cursor: pointer;
+}
+
+.like_a_tab.active{
+	border: 1px solid #f7f7f7;
+	border-bottom: 0 !important;
+
+}
+
+.share_form textarea{
+	width: 100%;
+	display: block;
+	height: 150px;
+	padding: 6px 14px;
+	font-size: 14px;
+	border-radius: 5px;
+	margin-top: 20px;
+	border: 1px solid #EAEBF2;
+	resize: none;
+}
+
+.share_form input[type='submit']{
+	cursor: pointer;
+}
+
+
+.share_form .checkbox{
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+#hide_share_form{
+
+	font-size: 25px;
+	color: #4f87e5;
+	position: absolute;
+	
+}
+#send_mail_r_form{
+	position: relative;
+}
+
+.loading_form{
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #f6f6f9;
+	padding-top: 29%;
+	text-align: center;
+}
+
+
+#send_to_another{
+	color: #4a8ee6;
+}
+
+#create_share_link{
+	width: 30%;
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+
+.custom_li_title .custom_tit{
+	display: none;
+}
+
+.custom_li_title li{
+	position: relative;
+}
+
+.custom_li_title li:hover .custom_tit{
+    z-index: 100000;
+    padding: 10px;
+    display: block;
+    background: #4c8be6;
+    margin: 10px;
+    width: auto;
+    position: absolute;
+    top: -45px;
+    text-decoration: none;
+    white-space: nowrap;
+	color: white;
+	font-weight: bold;
+    left: 0;
+}
+
+.pdf_preloader{
+<<<<<<< HEAD
+	z-index: 100000 !important;
+=======
+	/* z-index: 100000 !important; */
+>>>>>>> 6e0684535f549ccaaa0325f404e820981545c358
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  margin-left: -60px;
+  left: 50%;
+  top: 50%;
+  margin-top: -60px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.text_content_element.not_editable_rotated_text{
+	pointer-events: none !important;
+}
+
+
+
+.pdfViewer .selected_now{
+
+}
+

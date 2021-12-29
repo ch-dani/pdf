@@ -1,0 +1,70 @@
+@media(max-width:1200px) {
+    .link_convert {
+        flex-direction: column;
+    }
+    .link_convert_left {
+        width: 100%;
+        border-bottom: 1px solid #A7A7A7;
+        padding-right: 0px;
+        padding-bottom: 30px;
+        justify-content: center;
+        border-right: none;
+    }
+    .link_convert_right {
+        width: 100%;
+        padding-left: 0px;
+        padding-top: 30px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .module__about-tools .container .row .col-12.col-lg-4 {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:576px) {
+    .link_convert {
+        flex-direction: row;
+    }
+    .link_convert_left {
+        width: 100%;
+        border-right: 1px solid #A7A7A7;
+        padding-right: 30px;
+        padding-bottom: 0px;
+        justify-content: center;
+        border-bottom: none;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .link_convert_right {
+        width: 100%;
+        padding-left: 30px;
+        padding-top: 0px;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .link_convert_item {
+        margin: 10px 0px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .convert_docs_wrapper {
+        flex-direction: column;
+    }
+    .convert_doc.left_doc,
+    .convert_doc.right_doc {
+        margin: 0px auto;
+    }
+    .convert_doc.left_doc {
+        margin-bottom: 50px;
+    }
+    .h30-title {
+        font-size: 25px;
+    }
+    .sub-title {
+        font-size: 15px;
+    }
+}

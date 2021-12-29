@@ -1,0 +1,129 @@
+.hidden{
+	display: none;
+}
+.pop-up .modal-header{
+	background-color: #f7f7f7;
+	padding: 15px;
+}
+
+.pop-up .modal-header .modal-title {
+	padding: 5px 30px 5px 10px;
+	color: #666;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.modal-body{
+	padding: 20px;
+	position: relative;
+}
+
+.modal-body .form-group{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.modal-body .form-group .half-column{
+	width: calc(50% - 10px);
+}
+
+.modal-body .form-group input{
+	width: 100%;
+	display: block;
+	height: 40px;
+	padding: 6px 14px;
+	font-size: 14px;
+	border-radius: 5px;
+	/*margin-top: 20px;*/
+	border: 1px solid #EAEBF2;
+}
+
+.modal-footer{
+	padding: 19px 20px 15px;
+	text-align: right;
+}
+
+.modal-footer .btn{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.btn-replace, .btn-replace-find-next{
+	background: #FFFFFF;
+	border: 1px solid #EAEBF2;
+	box-sizing: border-box;
+	border-radius: 5px;
+	line-height: 35px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.btn-find-next{
+	background: linear-gradient(49.25deg, #4298E8 0%, #8044DB 100%), linear-gradient(49.25deg, #ED6E76 0%, #F2AA6F 100%), linear-gradient(251.52deg, #61DFAA -19.24%, #2EB9B7 75.34%);
+	box-shadow: 0px 4px 8px rgba(35, 28, 75, 0.15);
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 0 20px;
+	cursor: pointer;
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 35px;
+	border: none;
+	color: #fff;
+	text-align: center;
+}
+
+
+.undo-table-wrap tr td.check input[type="checkbox"]{
+	margin: 10px 0;
+}
+
+.undo-table-wrap tr td{
+	padding: 5px 8px;
+	white-space: nowrap;
+}
+
+.undo-table-wrap {
+	height: 280px;
+	overflow-y: scroll;
+}
+
+.undo-table-wrap tr td.what .fas{
+	margin-right: 7px;
+}
+
+.alert-info {
+	color: #31708f;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	padding: 12px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+
+.fancybox-content{
+	padding: 0;
+}
+
+@media (max-width:480px){
+	.modal-body .form-group{
+		display: block;
+	}
+	.modal-body .form-group .half-column{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.modal-footer .btn{
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+}

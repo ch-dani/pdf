@@ -1,0 +1,29 @@
+body {
+    background: #222d32;
+}
+
+.help-block {
+    margin-top: 10px;
+    display: block;
+    color: #d42121;
+}
+
+.dataTables_filter {
+    margin-top: -36px;
+}
+
+.icons_box img {
+    border: 1px solid #3c8dbc;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.import_export_button {
+    margin-bottom: -2px;
+    margin-right: 5px;
+}
+
+
+
+

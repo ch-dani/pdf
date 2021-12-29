@@ -1,0 +1,545 @@
+
+@media (max-width: 1199px) {
+  .app-tools ul.tools-menu{
+    flex-wrap: wrap;
+  }
+  .app-tools ul.tools-menu > li{
+    margin: 3px;
+  }
+  .container {
+    width: 970px;
+  }
+  .footer-menu li {
+      margin: 0 12px 0;
+  }
+  .header-lists li {
+      margin-left: 10px;
+  }
+  .header-menu li {
+      margin-left: 12px;
+  }
+    .banner-left{
+        padding-right:15px;
+    }
+    .split-page-top {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .split-page-top .clear-btn {
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .split-range {
+        position: relative;
+        right: 0;
+        top: 17px;
+    }
+}
+@media (max-width: 991px) {
+  .app-workspace .page-main-part .page-wrap{
+    display: block;
+  }
+  .app-workspace .page-main-part .page-wrap .editor-text{
+    width: 100%;
+  }
+  .app-workspace .page-main-part .page-wrap .editor-img{
+    width: 100%;
+  }
+  .container {
+    width: 750px;
+  }
+  .footer-menu li a {
+      font-size: 12px;
+  }
+    .footer-menu li {
+        margin: 0 5px 0;
+    }
+  .footer-info a {
+      font-size: 13px;
+      margin-left: 15px;
+  }
+  .footer-made {
+      font-size: 13px;
+  }
+    .header-logo {
+        width: 120px;
+    }
+    .header-menu-block {
+        width: calc(100% - 120px);
+    }
+    .pracing-block {
+        width: calc(33.333% - 15px);
+        padding: 0px 10px 18px;
+    }
+    .pricing-cost {
+        margin: 30px 0 20px;
+    }
+    .crop-edit-auto {
+        margin: 20px auto 0 auto;
+    }
+    .split-extract-block.resize-margin-block {
+        width: 19.5%;
+    }
+    .split-extract-block {
+        padding: 10px;
+    }
+    .recognize-btns-block a.button-green {
+         margin: 10px 0 0;
+    }
+    .recognize-text-online {
+        padding: 20px 15px 70px;
+    }
+}
+@media (min-width: 768px) {
+    .header-menu-block {
+        display: flex !important;
+    }
+}
+@media (max-width: 767px) {
+    .upload-top-info .app-welcome {
+        padding: 20px;
+    }
+    .tooltip-wrap{
+        display:none;
+    }
+
+    .login-modal-wrap {
+        margin: 0;
+        width: 100%;
+    }
+    .lolin-modal-block {
+        padding: 15px;
+    }
+        .lolin-modal-block h3 {
+            font-size: 24px;
+            margin-top: 15px;
+        }
+    .sign-form {
+        margin: 30px auto 0 auto;
+        max-width:100%;
+    }
+        .sign-form button {
+            margin: 15px 0 15px;
+        }
+        .upload-top-info .app-welcome form {
+            padding: 30px;
+        }
+
+    .app-title-editor {
+        margin: 10px 0;
+    }
+
+    .app-workspace .page-main-part .page-side-bar {
+        right: 0;
+        top: -24px;
+    }
+
+    .page-main-part {
+        width: 100%;
+    }
+    .page-login .login-modal-wrap {
+        width: 100%;
+    }
+    .footer-editor .container {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .footer-editor .ft-back-btn, .footer-editor .apply-btn {
+        margin: 0 auto;
+    }
+
+    .footer-editor .ft-text-info {
+        margin: 15px 0;
+    }
+
+    .app-tools ul.tools-menu > li > a.tools-menu-item-more {
+        display: inline-block;
+        height: auto;
+    }
+
+    ul.tools-dropdown-menu.dropdown-menu-right {
+        left: 0;
+    }
+
+        ul.tools-dropdown-menu.dropdown-menu-right::after {
+            left: 9px;
+            right: auto;
+        }
+
+    .app-tools ul.tools-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .menu_mob {
+        display: block;
+    }
+
+    .header-menu-block {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 10px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+    .header-menu,
+    .header-lists {
+        flex-direction: column;
+        text-align: center;
+    }
+
+        .header-menu li,
+        .header-lists li {
+            margin-left: 0;
+        }
+
+            .header-menu li a,
+            .header-lists li a {
+                font-size: 16px;
+                line-height: 35px;
+            }
+
+    .footer-wrap .container {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        padding: 15px 0;
+        align-items: center;
+    }
+
+        .footer-menu li a {
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+    .footer-bottom .container {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .footer-made {
+        margin: 0 0 15px;
+        text-align: center;
+    }
+
+    .main-banner .container {
+        flex-direction: column;
+    }
+
+    .banner-left {
+        padding: 0 0 25px;
+        text-align: center;
+    }
+
+    .banner-btns-links {
+        margin: 10px 0 0;
+        flex-direction: row;
+        padding: 0 15px;
+    }
+
+        .banner-btns-links li {
+            width: 33px;
+            height: 33px;
+        }
+
+    .banner-right {
+        flex-direction: column;
+    }
+
+    .banner-left .button-green {
+        margin: auto;
+    }
+
+    .accordion-tittle {
+        height: 60px;
+        padding: 0px 12px;
+    }
+
+    .accordion-arrow {
+        right: 7px;
+    }
+
+    .accordion-info {
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+        .accordion-info li {
+            text-align: center;
+            width: 17px;
+            margin: 0 6px;
+        }
+
+    .accordion-name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .def-pdf-block {
+        padding: 30px 20px 32px;
+    }
+
+    .banner-pdf {
+        padding: 20px 10px;
+    }
+
+    .accordion-list li span {
+        padding: 0;
+        line-height: 20px;
+    }
+
+    .accordion-list {
+        padding: 20px 10px 10px 30px;
+    }
+
+    /* .header-menu li.open-menu-btn {
+        width: 80px;
+        margin: auto;
+    }
+
+    .open-menu-btn:before {
+        top: 12px;
+        right: 0px;
+    } */
+
+    body .mega-menu {
+        margin-top: 265px;
+    }
+
+    /* .mega-menu {
+        overflow: scroll;
+    } */
+
+     .mega-menu .header {
+         margin-bottom: 0px;
+     }
+
+    .new-container {
+        flex-direction: column;
+    }
+
+    .new-block {
+        margin: 15px 0 0;
+        align-items: center;
+    }
+
+    .mob-min-height {
+        min-height: 300px;
+    }
+    .pracing-block {
+        width: 100%;
+        padding: 0px 10px 18px;
+        max-width: 300px;
+        margin:0 15px 25px;
+    }
+    .pracing-wrap {
+        justify-content: center;
+    }
+    .pricing-left-info,
+    .pricing-right-info {
+        width: 100%;
+        margin: 0 0 25px;
+    }
+    .pricing-info-block:first-child {
+        flex-direction: column-reverse;
+    }
+    .pricing-info-block {
+        padding: 60px 0 20px;
+    }
+    .faq-info-block {
+        width: 100%;
+    }
+    .pricing-info {
+        padding: 0;
+    }
+    .alt-mix-block {
+        margin-bottom: 20px;
+    }
+    .crop-edit-form{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+     .crop-edit-form label {
+         margin-bottom: 20px;
+     }
+    .fixed-task-form .input-group .input-group-addon {
+        display: none;
+    }
+    .encrypt-new-edit .fixed-task-form {
+        width: calc(100% - 30px);
+    }
+    .split-extract-block.resize-margin-block {
+        width: 30.5%;
+    }
+    .margin-label input {
+        width: 40px;
+        height: 28px;
+        padding-left: 5px;
+        margin: 0 5px;
+    }
+
+    .fixed-bottom-panel {
+        padding: 15px 15px 10px;
+    }
+
+    .margin-label {
+        font-size: 14px;
+    }
+
+        .margin-label b {
+            width: 60px;
+        }
+
+        .margin-label.full-width {
+            width: 50%;
+        }
+
+    .margin-forms h3 {
+        margin: 0px 0 10px;
+        font-size: 15px;
+    }
+    .resize-btn-block {
+        margin: 10px 0 0;
+    }
+    .recognize-left-pdf {
+        width: 100%;
+    }
+    .recognize-midle {
+        width: 100%;
+        margin: 25px 0;
+    }
+    .recognize-right-info {
+        width: 100%;
+    }
+    .recognize-midle img {
+        margin: 15px 0 0;
+        transform: rotate(90deg);
+    }
+    .recognize-settings-block {
+        padding: 0;
+        width: 100%;
+    }
+    .output-btn {
+        width: 100%;
+        margin: 2px 0;
+    }
+    .select {
+        height: 30px;
+    }
+    .options-btn {
+        font-size: 14px;
+        padding: 8px 30px;
+    }
+    .split-pdf-down-uploaded-content .btn {
+        margin: 5px;
+    }
+}
+@media (max-width: 575px) {
+  .upload-top-info .app-welcome h3{
+    font-size: 30px;
+  }
+  .text-editable-menu .btn-group-wrap{
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+  }
+  ul.tools-dropdown-menu.color-opts::after{
+    left: 50px;
+    right: auto;
+  }
+  ul.tools-dropdown-menu.color-opts{
+    left: 0;
+    right: auto;
+  }
+  .text-editable-menu{
+    left: 25px;
+  }
+  .text-editable-menu .btn-group-wrap .btn-group{
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  .text-editable-menu .btn-group-wrap .btn-group .editable-btn{
+    width: 100%;
+  }
+    .split-extract-block.resize-margin-block {
+        width: 49.5%;
+    }
+  .app-workspace .page-main-part .page-wrap{
+    padding: 40px 15px;
+  }
+  ul.tools-dropdown-menu.list-opts, ul.tools-dropdown-menu.forms-opts{
+    width: 260px;
+  }
+  ul.tools-dropdown-menu.list-opts li .highlight-text{
+    margin-right: 2px;
+  }
+  .app-title h1{
+     font-size: 26px;
+     padding: 0 15px;
+     line-height: 36px;
+  }
+  .app-title p{
+    font-size: 21px;
+    padding: 0 15px;
+  }
+    .forever-free h6 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .pricing-info-title {
+        font-size: 27px;
+        margin: 0 0 35px;
+    }
+    .subscription-plans h6 {
+        line-height: 40px;
+        font-size: 32px;
+    }
+
+    .new-block p {
+        font-size: 13px;
+    }
+    .new-block.merge-pdf-info{
+        flex-wrap:wrap;
+    }
+    .app-title .new-block.merge-pdf-info p {
+        font-size: 21px;
+        padding: 0 5px;
+        font-size: 12px;
+        width: calc(100% - 37px);
+    }
+    .new-block b {
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+    }
+}

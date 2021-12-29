@@ -1,0 +1,397 @@
+html.loading:before{
+    content: '';
+    background: #ccc8;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+}
+
+.downloader input[type="file"],
+#pages-pdf input[type="file"],
+#merge-pdf input[type="file"]{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+main.file_not_loaded .section_top.converting{
+    display: none;
+}
+main.file_not_loaded .section_top.converting.ppt_section,
+main.file_not_loaded .section_top.converting.epub_section,
+main.file_not_loaded .section_top.converting.pdfloader_section {
+    display: block;
+}
+main.file_uploaded .section_top,
+main.file_uploaded .module__how-convert,
+main.file_uploaded .module__our-blog,
+main.file_uploaded .module__need-help,
+main.file_uploaded .module__testimonial{
+    display: none;
+}
+main.file_uploaded .section_top.converting{
+    display: block;
+}
+
+main.step2 .downloader.download,
+main.step2 .link_download{
+    display: none;
+}
+main.step3 .downloader.convert,
+main.step3 .link_convert{
+    display: none;
+}
+
+.convert_docs_wrapper .right_doc{
+    margin-right: 20px;
+}
+.convert_docs_wrapper .right_doc canvas{
+    height: 226px;
+}
+
+.downloader__upload-wrapper{
+    position: relative;
+}
+.downloader__upload{
+    /*position: relative;*/
+}
+.downloader__upload:hover{
+    pointer-events: none;
+}
+.downloader__upload:hover .downloader__arrow{
+    pointer-events: all;
+}
+
+.convert_docs_wrapper .right_doc .convert_doc_content{
+    overflow: hidden;
+}
+
+.tool-page-block.selected{
+    background-color: rgba(0,0,0,.1);
+}
+.tool-page-block.hidden{
+    display: none;
+}
+
+.link_convert .save{
+    max-width: 460px;
+}
+
+.watermark-pdf-block #pages_previews_here canvas{
+    border: 1px dashed rgba(253, 94, 94, 0.4);
+}
+
+.document_add_element:focus{
+    outline: none;
+}
+.document_add_element_menu{
+    overflow: unset;
+}
+.tools-dropdown-menu {
+    position: absolute;
+    z-index: 9;
+    margin-top: 13px;
+    top: 100%;
+    display: none;
+    min-width: 160px;
+    background-color: #fff;
+    border: 1px solid #EAEBF2;
+    border-radius: 10px;
+}
+.tools-dropdown-menu.active {
+    display: block;
+    padding: 10px;
+}
+.tools-dropdown-menu li{
+    padding-bottom: 5px;
+}
+.tools-dropdown-menu li:last-child{
+    padding-bottom: 0;
+}
+.tools-dropdown-menu li a{
+    display: block;
+    height: auto;
+    color: #0C3E70;
+}
+.tools-dropdown-menu .color-opts {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    margin-bottom: -10px;
+}
+.tools-dropdown-menu .color-opts a {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+picker_outer li{
+    padding-bottom: 5px;
+}
+.picker_outer li:last-child{
+    padding-bottom: 0;
+}
+.picker_outer li a{
+    display: block;
+    height: auto;
+    color: #0C3E70;
+}
+.picker_outer .color-opts {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: -10px;
+}
+.picker_outer .color-opts a {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.document_add_element.edit_state {
+    max-width: none;
+}
+.document_add_element.resizable_helper {
+    border: 1px dashed rgba(253, 94, 94, 0.4);
+}
+
+.watermark .document_add_element{
+    text-transform: none;
+}
+
+.watermark .text_content{
+    padding: 10px;
+}
+
+.watermark_draggable_text .ui-rotatable-handle, .outer_image_div .ui-rotatable-handle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.outer_image_div .delete_wattermark{
+    position: absolute;
+    right: 4px;
+    bottom: 6px;
+}
+.outer_image_div .delete_wattermark svg path{
+    fill: #0C3E70;
+}
+.outer_image_div .delete_wattermark:hover svg path{
+    fill: #38E274;
+}
+.watermark_draggable_text * {
+    outline: none !important;
+}
+.ui-rotatable-handle {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: 10px !important;
+    left: 6px !important;
+    color: #0C3E70;
+}
+.ui-rotatable-handle:hover{
+    color: #38E274;
+}
+.ui-rotatable-handle {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    background-size: 100%;
+    left: 2px;
+    bottom: 2px;
+}
+.ui-rotatable-handle::before {
+    content: "\f2f1";
+    font-size: 20px;
+}
+
+.editable_element::before, .watermark_draggable_text .rotatable_helper::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-image: none;
+    background-size: auto;
+    background-image: url("../img/drag.svg");
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    border: 1px solid #eaebf2;
+    top: -30px;
+    left: 50%;
+    cursor: move;
+    width: 26px;
+    height: 26px;
+    transform: translateX(-50%);
+}
+
+.document_add_element_submenu li label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #0C3E70;
+    cursor: pointer;
+    transition: .3s;
+}
+.document_add_element_submenu li label:hover {
+    color: #38E274;
+}
+.document_add_element_submenu li label:hover svg path {
+    fill: #38E274;
+}
+.document_add_element_submenu li label svg {
+    margin-right: 10px;
+}
+.document_add_element_submenu input {
+    display: none;
+}
+
+.outer_image_div.wattermark_block .document_add_element{
+    max-width: none;
+}
+
+.ui-icon-gripsmall-diagonal-se{
+    display: none !important;
+}
+.active-user {
+    width: 100%;
+}
+.active-user_doshed {
+    /*padding: 20px;*/
+    padding: 60px;
+}
+
+.convert_doc.left_doc input[type="file"]{
+    z-index: 1;
+}
+.convert_doc.left_doc .icon_add_select,
+.convert_doc.left_doc .select_wrapper{
+    z-index: 2;
+}
+
+.pdfloader_section .convert_docs_wrapper .convert_doc{
+    cursor: default;
+}
+
+#savetodrive-div > iframe{
+    width: 100% !important;
+}
+
+.link_convert.one_item .link_convert_left{
+    padding-right: 0;
+    justify-content: center;
+}
+.link_convert.one_item .link_convert_item{
+    margin-right: 0;
+}
+
+.subscription-purchase-popup .nice-select .list{
+    overflow-y: scroll;
+    max-height: 200px;
+}
+.ui-resizable-se{
+	bottom: -7px;
+	right: -10px;
+}
+
+.footer_top_title svg path {
+    fill: #fff;
+}
+
+.create-signature-modal .signature-btns {
+    margin: 25px 20px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+.create-signature-modal .signature-btns li {
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    color: #0C3E70;
+    border: 1px solid rgba(221, 221, 221, 0.00);
+    margin-bottom: -1px;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 1.4;
+}
+.create-signature-modal .signature-btns li.active {
+    border: 1px solid #ddd;
+    border-bottom-color: rgb(221, 221, 221);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom: 1px solid #ffffff;
+    color: #555555;
+}
+.create-signature-modal .signature-btns li:hover{
+    color: #38E274;
+}
+.create-signature-modal .signature-btns li i {
+    margin-right: 5px;
+}
+.create-signature-modal .create-tab-block{
+    display: none;
+}
+.create-signature-modal .create-tab-block.active{
+    display: block;
+}
+.create-signature-modal .signature-input {
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: block;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    vertical-align: middle;
+}
+.create-signature-modal .signature-wodrds {
+    padding: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.create-signature-modal .signature-wodrds .signaturePreview {
+    border-radius: 5px;
+    font-size: 35px;
+    padding: 12px 5px;
+    margin: 0 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.create-signature-modal .signature-wodrds .signaturePreview:nth-child(1) {
+    background: rgba(128, 68, 219, 0.25);
+    color: #8044DB;
+}
+.create-signature-modal .signature-wodrds .signaturePreview:hover {
+    background: rgba(128, 68, 219, 0.25);
+    color: #8044DB;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="Author" content="Mary"/>
+<meta name="Creator" content="Acrobat PDFMaker 9.0 for Word"/>
+<meta name="Producer" content="Adobe PDF Library 9.0"/>
+<meta name="CreationDate" content=""/>
+</head>
+<body>
+<doc>
+  <page width="612.000000" height="792.000000">
+    <word xMin="72.000000" yMin="95.862000" xMax="127.682640" yMax="112.274760">Example</word>
+    <word xMin="130.659120" yMin="95.862000" xMax="163.316160" yMax="112.274760">table</word>
+    <word xMin="72.000000" yMin="112.366080" xMax="98.158440" yMax="130.656240">This</word>
+    <word xMin="101.749440" yMin="112.366080" xMax="111.708480" yMax="130.656240">is</word>
+    <word xMin="115.299480" yMin="112.366080" xMax="131.355240" yMax="130.656240">an</word>
+    <word xMin="134.978160" yMin="112.366080" xMax="190.311480" yMax="130.656240">example</word>
+    <word xMin="193.998240" yMin="112.366080" xMax="207.261000" yMax="130.656240">of</word>
+    <word xMin="210.899880" yMin="112.366080" xMax="218.544720" yMax="130.656240">a</word>
+    <word xMin="222.183600" yMin="112.366080" xMax="251.294640" yMax="130.656240">data</word>
+    <word xMin="254.933520" yMin="112.366080" xMax="292.056480" yMax="130.656240">table.</word>
+    <word xMin="90.000000" yMin="159.336000" xMax="136.488000" yMax="173.088000">Disability</word>
+    <word xMin="90.000000" yMin="173.976000" xMax="134.568000" yMax="187.728000">Category</word>
+    <word xMin="167.160000" yMin="166.656000" xMax="226.668000" yMax="180.408000">Participants</word>
+    <word xMin="239.400000" yMin="159.336000" xMax="273.468000" yMax="173.088000">Ballots</word>
+    <word xMin="239.400000" yMin="173.976000" xMax="294.084000" yMax="187.728000">Completed</word>
+    <word xMin="90.000000" yMin="215.929920" xMax="112.587840" yMax="228.581760">Blind</word>
+    <word xMin="195.120000" yMin="215.929920" xMax="200.717280" yMax="228.581760">5</word>
+    <word xMin="267.240000" yMin="215.929920" xMax="272.837280" yMax="228.581760">1</word>
+    <word xMin="90.000000" yMin="241.849920" xMax="108.337440" yMax="254.501760">Low</word>
+    <word xMin="110.876640" yMin="241.849920" xMax="138.024000" yMax="254.501760">Vision</word>
+    <word xMin="195.122880" yMin="241.849920" xMax="200.720160" yMax="254.501760">5</word>
+    <word xMin="267.247200" yMin="241.849920" xMax="272.844480" yMax="254.501760">2</word>
+    <word xMin="311.400000" yMin="152.016000" xMax="345.468000" yMax="165.768000">Ballots</word>
+    <word xMin="311.400000" yMin="166.656000" xMax="373.200000" yMax="180.408000">Incomplete/</word>
+    <word xMin="311.400000" yMin="181.296000" xMax="369.444000" yMax="195.048000">Terminated</word>
+    <word xMin="448.200000" yMin="144.456000" xMax="484.188000" yMax="158.208000">Results</word>
+    <word xMin="400.680000" yMin="171.816000" xMax="445.488000" yMax="185.568000">Accuracy</word>
+    <word xMin="483.120000" yMin="171.816000" xMax="507.876000" yMax="185.568000">Time</word>
+    <word xMin="510.600000" yMin="171.816000" xMax="521.256000" yMax="185.568000">to</word>
+    <word xMin="478.680000" yMin="188.616000" xMax="525.636000" yMax="202.368000">complete</word>
+    <word xMin="343.680000" yMin="215.929920" xMax="349.277280" yMax="228.581760">4</word>
+    <word xMin="398.280000" yMin="215.929920" xMax="428.518560" yMax="228.581760">34.5%,</word>
+    <word xMin="431.035680" yMin="215.929920" xMax="447.794400" yMax="228.581760">n=1</word>
+    <word xMin="471.480000" yMin="215.929920" xMax="493.880160" yMax="228.581760">1199</word>
+    <word xMin="496.320000" yMin="215.929920" xMax="513.597600" yMax="228.581760">sec,</word>
+    <word xMin="515.993280" yMin="215.929920" xMax="532.873440" yMax="228.581760">n=1</word>
+    <word xMin="343.688160" yMin="241.849920" xMax="349.285440" yMax="254.501760">3</word>
+    <word xMin="399.605760" yMin="241.849920" xMax="427.062240" yMax="254.501760">98.3%</word>
+    <word xMin="429.601440" yMin="241.849920" xMax="446.360160" yMax="254.501760">n=2</word>
+    <word xMin="471.487200" yMin="241.849920" xMax="493.887360" yMax="254.501760">1716</word>
+    <word xMin="496.327200" yMin="241.849920" xMax="513.604800" yMax="254.501760">sec,</word>
+    <word xMin="516.000480" yMin="241.849920" xMax="532.880640" yMax="254.501760">n=3</word>
+    <word xMin="394.924800" yMin="267.286080" xMax="428.519520" yMax="279.937920">(97.7%,</word>
+    <word xMin="430.915200" yMin="267.286080" xMax="451.184640" yMax="279.937920">n=3)</word>
+    <word xMin="468.241440" yMin="267.286080" xMax="493.997760" yMax="279.937920">(1934</word>
+    <word xMin="496.437600" yMin="267.286080" xMax="513.593760" yMax="279.937920">sec,</word>
+    <word xMin="516.110880" yMin="267.286080" xMax="536.258880" yMax="279.937920">n=2)</word>
+    <word xMin="90.000000" yMin="293.209920" xMax="131.245440" yMax="305.861760">Dexterity</word>
+    <word xMin="195.111840" yMin="293.209920" xMax="200.709120" yMax="305.861760">5</word>
+    <word xMin="267.236160" yMin="293.209920" xMax="272.833440" yMax="305.861760">4</word>
+    <word xMin="343.677120" yMin="293.209920" xMax="349.274400" yMax="305.861760">1</word>
+    <word xMin="398.280960" yMin="293.209920" xMax="428.519520" yMax="305.861760">98.3%,</word>
+    <word xMin="431.036640" yMin="293.209920" xMax="447.795360" yMax="305.861760">n=4</word>
+    <word xMin="467.402400" yMin="293.209920" xMax="498.082560" yMax="305.861760">1672.1</word>
+    <word xMin="500.643840" yMin="293.209920" xMax="517.800000" yMax="305.861760">sec,</word>
+    <word xMin="520.317120" yMin="293.209920" xMax="537.075840" yMax="305.861760">n=4</word>
+    <word xMin="90.000000" yMin="319.129920" xMax="127.282080" yMax="331.781760">Mobility</word>
+    <word xMin="195.122880" yMin="319.129920" xMax="200.720160" yMax="331.781760">3</word>
+    <word xMin="267.247200" yMin="319.129920" xMax="272.844480" yMax="331.781760">3</word>
+    <word xMin="343.688160" yMin="319.129920" xMax="349.285440" yMax="331.781760">0</word>
+    <word xMin="398.292000" yMin="319.129920" xMax="428.530560" yMax="331.781760">95.4%,</word>
+    <word xMin="431.047680" yMin="319.129920" xMax="447.806400" yMax="331.781760">n=3</word>
+    <word xMin="471.487200" yMin="319.129920" xMax="493.887360" yMax="331.781760">1416</word>
+    <word xMin="496.327200" yMin="319.129920" xMax="513.604800" yMax="331.781760">sec,</word>
+    <word xMin="516.000480" yMin="319.129920" xMax="532.880640" yMax="331.781760">n=3</word>
+  </page>
+</doc>
+</body>
+</html>
